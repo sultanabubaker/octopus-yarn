@@ -24,7 +24,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "handlebars": "4.0.10",
+    "handlebars": "4.7.4",
     "octopus-start-modules-tasks": "~0.0.1",
     "octopus-start-tasks": "~0.0.1"
   },
