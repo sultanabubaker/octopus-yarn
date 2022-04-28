@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "graphlib": "2.1.1",
-    "lodash": "4.17.4",
+    "lodash": "4.17.21",
     "minimatch": "3.0.4",
     "object-filter": "1.0.2",
     "parse-gitignore": "0.4.0",
