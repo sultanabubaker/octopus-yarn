@@ -1,0 +1,37 @@
+{
+  "name": "octopus-test-utils",
+  "version": "0.0.2",
+  "description": "test utils for octopus modules",
+  "author": "Vilius Lukosius",
+  "license": "ISC",
+  "homepage": "https://github.com/wix/octopus/test-utils",
+  "main": "index.js",
+  "scripts": {
+    "build": ":",
+    "lint": "eslint *.js **/*.js",
+    "test": "mocha 'test/**/*.spec.js' 'test/**/*.it.js'",
+    "posttest": "npm run lint -s",
+    "release": "npm-version-up --no-shrinkwrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix/octopus"
+  },
+  "bugs": {
+    "url": "https://github.com/wix/octopus/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "fs-extra": "3.0.1",
+    "bluebird": "3.5.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-mocha": "4.9.0",
+    "mocha": "3.4.1",
+    "npm-version-up": "0.1.5"
+  }
+}

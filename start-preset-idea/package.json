@@ -1,0 +1,46 @@
+{
+  "name": "octopus-start-preset-idea",
+  "version": "0.0.1",
+  "description": "task for start that generates intellij project for repo",
+  "author": "Vilius Lukosius",
+  "license": "ISC",
+  "homepage": "https://github.com/wix/octopus/start-prepush",
+  "main": "index.js",
+  "scripts": {
+    "build": ":",
+    "lint": "eslint *.js **/*.js",
+    "test": "mocha 'test/**/*.spec.js' 'test/**/*.it.js'",
+    "posttest": "npm run lint -s",
+    "release": "npm-version-up --no-shrinkwrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix/octopus"
+  },
+  "bugs": {
+    "url": "https://github.com/wix/octopus/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "handlebars": "4.0.10",
+    "octopus-start-modules-tasks": "~0.0.1",
+    "octopus-start-tasks": "~0.0.1"
+  },
+  "peerDependencies": {
+    "start": ">= 5.1.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.19.0",
+    "eslint-plugin-mocha": "4.9.0",
+    "mocha": "3.4.1",
+    "npm-version-up": "0.1.5",
+    "octopus-test-utils": "~0.0.2",
+    "shelljs": "0.7.7",
+    "sinon": "2.3.1",
+    "sinon-chai": "2.10.0",
+    "start": "5.1.0"
+  }
+}

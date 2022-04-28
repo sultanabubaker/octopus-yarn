@@ -1,0 +1,25 @@
+language: node_js
+branches:
+  only:
+  - master
+node_js:
+  - '6'
+  - '7'
+cache:
+  directories:
+    - $HOME/.yarn-cache
+script:
+  - npm install
+  - npm run bootstrap
+  - npm run test
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: viliusl@wix.com
+  api_key:
+    secure: q91VRRHLvkkZhhG7hyvZP+/sy99uKPV1QSexQrMnjaIe3Q+R0YJ8g4tlIyb01wRYN8p+0ZLVmb7F7uzVIRQZbNFCE0MFfgZN29iH6zbG0mXeyYFJ+QkMZvkNZCqpQh+dWwIk+Jwcvj3gAEbAeFifY4G3H0ZRCWXytYliJ6fRYuOzQI8imot8sHw2VePEBWsspbM/ztNuIt1Tnu7RhzhEB8mcVUH8QPKuPoXhReR8zENJfOEB31fDdx0VVh9UcRhQauypu87Ur/AkAWkiMoZMrHfrrSeIpaYAlDIoLw3/dvqj2WNEwiR+Z4ftqqdrp+CVV8vMjc1l/Zpe644cSGIUVas0SJW3ZAciQBKICDB66LcTGSZRuoAmilopOaP+gnpU5FQ0iLtW1VN9VHq8m0tBT0GGVVlX5CrLQPRMzYBtLc6G4ZSXPRf4hW54qKvfdxGbelRjzwWgEi/qjxLh4HpZKGy0vKnZ3+7TtHM44P+yCjGeSjifCjONYSmCmsbj+MrXQFrzE6WsBioL1PH4bNm2gy/qmqobNzIHF/s/k71k84UEYWEfrzOc4tANeyeT2RL1hK9EeKJVBY1Sn5NFhEZ9eN4RWPPDBmJyLYhZ2nJfmIz/nZffesmix22i0NYew/4gj/wJK1YxfTL3JS8WJQ3FVnOEVcL/mmyXkadDMRRqDv4=
+  on:
+    branch: master
+    node: '7'
+after_deploy:
+  - npm run publish-all
